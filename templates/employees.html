@@ -4,7 +4,55 @@
     </head>
     <body>
         <div>
-            {{ employees }}
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            Employee Number
+                        </th>
+                        <th>
+                            First Name
+                        </th>
+                        <th>
+                            Last Name
+                        </th>
+                        <th>
+                            Bithday
+                        </th>
+                        <th>
+                            Hire Date
+                        </th>
+                        <th>
+                            Gender
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for employee in employees %}
+                        <tr>
+                            <td>
+                                {{ employee[0] }}
+                            </td>
+
+                            <td>
+                                {{ employee[2] }}
+                            </td>
+                            <td>
+                                {{ employee[3] }}
+                            </td>
+                            <td>
+                                {{ employee[1] }}
+                            </td>
+                            <td>
+                                {{ employee[5] }}
+                            </td>
+                            <td>
+                                {{ employee[4] }}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
     </body>
 </html>
